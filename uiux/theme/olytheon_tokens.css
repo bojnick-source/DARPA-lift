@@ -1,0 +1,82 @@
+/* ==========================================
+   OLYTHEON THEME TOKENS — A61 (HARDENED)
+   Implements:
+     - Inter typography
+     - Dark mode defaults
+     - Your palette:
+         Electric Copper #E67E22
+         Lightning Blue  #3498DB
+         Matte Charcoal  #2C3E50
+         Soft Gold       #F39C12
+   ========================================== */
+
+/* Inter font (preferred) — load via your bundler or <link> in index.html */
+/* Example (HTML):
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+*/
+
+:root {
+  --oly-font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --oly-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Brand accents */
+  --oly-copper: #E67E22;
+  --oly-blue: #3498DB;
+  --oly-gold: #F39C12;
+  --oly-charcoal: #2C3E50;
+
+  /* Semantic */
+  --oly-ok: #2ecc71;      /* keep semantic; do not overload brand accents */
+  --oly-warn: var(--oly-gold);
+  --oly-err: #e74c3c;
+  --oly-info: var(--oly-blue);
+
+  /* Surfaces (dark) */
+  --oly-bg: #0b0f14;
+  --oly-surface: #0f1620;
+  --oly-surface2: #121b26;
+  --oly-surface3: #172235;
+  --oly-border: rgba(255, 255, 255, 0.10);
+
+  /* Text */
+  --oly-text: rgba(255, 255, 255, 0.92);
+  --oly-text-muted: rgba(255, 255, 255, 0.62);
+  --oly-text-faint: rgba(255, 255, 255, 0.42);
+
+  /* Accent foreground */
+  --oly-on-accent: #0b0f14;
+
+  /* Focus */
+  --oly-focus: rgba(52, 152, 219, 0.35);
+
+  /* Radius & spacing */
+  --oly-r-sm: 8px;
+  --oly-r-md: 10px;
+  --oly-r-lg: 14px;
+
+  --oly-pad-sm: 10px;
+  --oly-pad-md: 14px;
+  --oly-pad-lg: 18px;
+
+  /* Motion (keep conservative) */
+  --oly-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --oly-fast: 120ms;
+  --oly-med: 180ms;
+}
+
+html, body {
+  font-family: var(--oly-font);
+  background: var(--oly-bg);
+  color: var(--oly-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:focus-visible {
+  outline: 2px solid var(--oly-focus);
+  outline-offset: 2px;
+}

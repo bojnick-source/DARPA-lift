@@ -1,0 +1,139 @@
+/* ==========================================
+   BRAND THEME (Olytheon) — A126 (HARDENED)
+   Dark-mode palette + primitives.
+   ========================================== */
+
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+  /* Brand */
+  --oly-copper: #e67e22;
+  --oly-blue: #3498db;
+  --oly-charcoal: #2c3e50;
+  --oly-gold: #f39c12;
+
+  /* Dark surfaces */
+  --oly-bg: #0b0f14;
+  --oly-surface: #101825;
+  --oly-surface2: #0f1622;
+
+  /* Text */
+  --oly-text: #e9eef6;
+  --oly-text-muted: #a8b3c6;
+
+  /* Borders */
+  --oly-border: rgba(255, 255, 255, 0.1);
+
+  /* State colors */
+  --oly-ok: #2ecc71;
+  --oly-warn: #f1c40f;
+  --oly-err: #e74c3c;
+
+  /* Focus */
+  --oly-focus: rgba(52, 152, 219, 0.45);
+
+  /* Typography */
+  --oly-font: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --oly-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Radii */
+  --oly-radius: 12px;
+  --oly-radius-sm: 10px;
+
+  /* Spacing */
+  --oly-gap: 10px;
+}
+
+html,
+body {
+  background: var(--oly-bg);
+  color: var(--oly-text);
+  font-family: var(--oly-font);
+}
+
+.oly-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--oly-gap);
+}
+
+.oly-card {
+  border: 1px solid var(--oly-border);
+  border-radius: var(--oly-radius);
+  background: var(--oly-surface);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.oly-input {
+  width: 100%;
+  border: 1px solid var(--oly-border);
+  border-radius: var(--oly-radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--oly-text);
+  padding: 10px 12px;
+  outline: none;
+  font-family: var(--oly-font);
+}
+
+.oly-input:focus {
+  border-color: rgba(52, 152, 219, 0.55);
+  box-shadow: 0 0 0 3px var(--oly-focus);
+}
+
+.oly-btn,
+.oly-btn-primary {
+  border: 1px solid var(--oly-border);
+  border-radius: var(--oly-radius-sm);
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--oly-text);
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+}
+
+.oly-btn:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.oly-btn:disabled,
+.oly-btn-primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.oly-btn-primary {
+  border-color: rgba(52, 152, 219, 0.35);
+  background: linear-gradient(180deg, rgba(52, 152, 219, 0.22), rgba(230, 126, 34, 0.1));
+}
+
+.oly-btn-primary:hover {
+  border-color: rgba(52, 152, 219, 0.6);
+  background: linear-gradient(180deg, rgba(52, 152, 219, 0.28), rgba(230, 126, 34, 0.12));
+}
+
+.oly-badge {
+  border: 1px solid var(--oly-border);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.oly-badge-ok {
+  border-color: rgba(46, 204, 113, 0.35);
+  color: rgba(46, 204, 113, 1);
+}
+
+.oly-badge-warn {
+  border-color: rgba(241, 196, 15, 0.35);
+  color: rgba(241, 196, 15, 1);
+}
+
+.oly-badge-err {
+  border-color: rgba(231, 76, 60, 0.35);
+  color: rgba(231, 76, 60, 1);
+}

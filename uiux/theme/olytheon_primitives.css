@@ -1,0 +1,75 @@
+/* ==========================================
+   OLYTHEON PRIMITIVES — A62 (HARDENED)
+   Buttons, cards, badges, inputs. iPad-friendly hit targets.
+   ========================================== */
+
+.oly-card {
+  border: 1px solid var(--oly-border);
+  background: var(--oly-surface);
+  border-radius: var(--oly-r-md);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+}
+
+.oly-btn,
+.oly-btn-primary {
+  font-family: var(--oly-font);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 14px;
+  min-height: 42px; /* touch target */
+  border: 1px solid var(--oly-border);
+  background: var(--oly-surface2);
+  color: var(--oly-text);
+  cursor: pointer;
+  transition: transform var(--oly-fast) var(--oly-ease), background var(--oly-fast) var(--oly-ease);
+}
+
+.oly-btn:hover { background: var(--oly-surface3); }
+.oly-btn:active { transform: translateY(1px); }
+
+.oly-btn-primary {
+  border: 1px solid rgba(230, 126, 34, 0.35);
+  background: linear-gradient(135deg, rgba(230,126,34,0.92), rgba(243,156,18,0.92));
+  color: var(--oly-on-accent);
+}
+
+.oly-btn-primary:hover { filter: brightness(1.03); }
+.oly-btn-primary:active { transform: translateY(1px); }
+
+.oly-badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--oly-border);
+  background: rgba(255,255,255,0.04);
+  color: var(--oly-text);
+}
+
+.oly-badge-ok { background: rgba(46, 204, 113, 0.20); border-color: rgba(46,204,113,0.35); }
+.oly-badge-warn { background: rgba(243, 156, 18, 0.20); border-color: rgba(243,156,18,0.35); }
+.oly-badge-err { background: rgba(231, 76, 60, 0.20); border-color: rgba(231,76,60,0.35); }
+
+.oly-input {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--oly-border);
+  background: var(--oly-surface2);
+  color: var(--oly-text);
+  font-family: var(--oly-font);
+  font-size: 14px;
+}
+
+.oly-input::placeholder { color: var(--oly-text-faint); }
+
+.oly-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
